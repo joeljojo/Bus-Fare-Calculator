@@ -1,0 +1,145 @@
+.heading h1 {
+  color: #ff5624;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+.fare-class {
+  margin: 20px 5% 5% 5%;
+  background: #f5f5f5;
+  display: flex;
+}
+.class {
+  background: #ffffff;
+  margin: 1% 0 1% 1%;
+  display: flex;
+  width: 60%;
+}
+.fare {
+  background: #ffffff;
+  margin: 1%;
+  width: 40%;
+}
+.first-class {
+  border-right: 1px solid #f5f5f5;
+}
+.first-class,
+.economy {
+  width: 50%;
+}
+.time h2 {
+  color: #823446;
+  font-size: 13px;
+  font-weight: 600;
+}
+.first-class h1,
+.economy h1 {
+  color: #ff5624;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 25px;
+}
+.para {
+  margin-bottom: 40px;
+}
+.para p {
+  text-transform: uppercase;
+  padding-left: 80px;
+  text-align: left;
+}
+.money {
+  color: #291800;
+  font-size: 13px;
+  font-weight: 600;
+}
+.time {
+  margin: 0 auto;
+  width: fit-content;
+  text-transform: uppercase;
+}
+.economy {
+  margin: 1px 1px 1px 0;
+}
+.fare h1 {
+  color: #b47750;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 8%;
+}
+.fare p {
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 8%;
+  text-transform: uppercase;
+  color: #cfa593;
+}
+.passengers {
+  display: flex;
+  flex-direction: column;
+}
+.age,
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 8% 1% 8%;
+}
+.age label {
+  text-transform: uppercase;
+  color: #cfa593;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+}
+.age .select {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.age .select select {
+  width: 150px;
+  padding: 10px 5px 10px 5px;
+}
+.select-class {
+  margin: 1% 8% 1% 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.select-class label {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 400;
+  color: #cfa593;
+}
+.select-class select {
+  padding: 10px 5px 10px 5px;
+}
+.coach-type h6 {
+  font-size: 11px;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+.coach-type h3 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #7db921;
+  margin-left: 25%;
+  padding-top: 0;
+}
+.book-btn {
+  background: #882c37;
+  margin: 1% 8% 5% 8%;
+  padding: 10px 5px 10px 5px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.book-btn:hover {
+  background: #7db921;
+  color: #ffffff;
+  cursor: pointer;
+}
