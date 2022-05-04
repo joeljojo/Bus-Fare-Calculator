@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../TrainFareCalculator/Fare.css";
 
 const Fare = () => {
   const [total, setTotal] = useState(0);
+  const [numberOfAdults, setNumberOfAdults] = useState(0);
+  const [teenager, setNumberOfTeenegers] = useState(0);
+  const [children, setNumberOfChildren] = useState(0);
+  const [coachType, setCoachType] = useState("economy");
   const FirstClassAdult = 3000;
   const FirstClassTeen = 1500;
   const EconomyAdult = 1000;
   const EconomyTeen = 500;
   const child = 0;
+
+  useEffect(() => {
+    let per_adult = coachType === "first" ? 3000 : 1500;
+    let per_teen = coachType === "first" ? 1000 : 500;
+    let total_cost = numberOfAdults * per_adult + teenager * per_teen;
+
+    setTotal(total_cost);
+  }, [numberOfAdults, teenager, coachType]);
 
   return (
     <div>
@@ -72,7 +84,14 @@ const Fare = () => {
             <div className="age">
               <div className="select">
                 <label htmlFor="Adults">Adults </label>
-                <select name="adults" id="adult">
+                <select
+                  name="adults"
+                  id="adult"
+                  value={numberOfAdults}
+                  onChange={(e) => {
+                    setNumberOfAdults(e.target.value);
+                  }}
+                >
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -88,7 +107,14 @@ const Fare = () => {
               </div>
               <div className="select">
                 <label htmlFor="teanegers">Children (12-17YRS)</label>
-                <select name="teeneger" id="teen">
+                <select
+                  name="teeneger"
+                  id="teen"
+                  value={teenager}
+                  onChange={(e) => {
+                    setNumberOfTeenegers(e.target.value);
+                  }}
+                >
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -104,7 +130,14 @@ const Fare = () => {
               </div>
               <div className="select">
                 <label htmlFor="children">Children (3-11YRS)</label>
-                <select name="children" id="child">
+                <select
+                  name="children"
+                  id="child"
+                  onChange={(e) => {
+                    setNumberOfChildren(e.target.value);
+                  }}
+                  value={children}
+                >
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -121,9 +154,16 @@ const Fare = () => {
             </div>
             <div className="select-class">
               <label htmlFor="coach-type">coach type</label>
-              <select name="coaches" id="coach-type">
+              <select
+                name="coaches"
+                id="coach-type"
+                onChange={(e) => {
+                  setCoachType(e.target.value);
+                }}
+                value={coachType}
+              >
                 <option value="economy">Economy</option>
-                <option value="first class">First Class</option>
+                <option value="first">First Class</option>
               </select>
             </div>
             <div className="coach-type">
